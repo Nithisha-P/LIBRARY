@@ -1,0 +1,72 @@
+.navbar{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #871536;
+    width: 100%;
+    background-color: paleturquoise;
+    }
+.navbar a{
+        padding-right: 1em;
+        text-decoration: none;
+        color: #19364f;
+        font-weight: bold;
+}
+
+.box-container {
+            display: flex; /* Display the boxes in a row */
+            justify-content: space-between; /* Space them evenly in the row */
+            padding-top: 20px;
+        }
+
+        /* Style for each box */
+.box {
+            width: 20%; /* Adjust the width to your preference */
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+        }
+
+form div{
+        margin: 1em;
+}
+
+h1{
+        padding-left: 1em;;
+}
+
+.page{
+        margin: 3em;
+}   
+
+.books-div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.card{
+        margin: 2em;
+}
+
+#dashboard-container{
+        margin: 3em;
+        display: block;
+}
+
+.check-in-success, .check-out-success, .check-out-failed, .check-in-failed{
+        display: none;
+}
+
+.add-success, .remove-success, .add-failed, .remove-failed{
+        display: none;
+}
+
+#books-container, #cin-cout-container, #admin-container{
+        display: none;
+}
+body{
+        background-color: bisque;
+}
+
+

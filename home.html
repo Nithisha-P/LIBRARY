@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./home.css">
+    <script src="home.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" id="dashboard-link">Dashboard</a>
+        <a href="#" id="books-link">Books</a>
+        <a href="#" id="cincout-link">Check-In-Check-Out</a>
+        <a href="#" id="admin-link">Admin</a>
+        <a href="./login.html">Logout</a>
+    </div>
+
+    <div id="dashboard-container">
+        <div>
+            <div class="box-container">
+                <div class="box"><div class="header-box"><p style="font-size: 30px;">Total Books: </p><p class="total-books"></p></div></div>
+                <div class="box"><div class="header-box"><p style="font-size: 30px;">Available Books</p><p class="avail-books"></p></div></div>
+                <div class="box"><div class="header-box"><p style="font-size: 30px;">Check Out Books</p><p class="check-out-books"></p></div></div>
+            </div>
+        </div>
+
+        <div>
+            <h1 id="dv" style="margin-top: 10%;text-align: center;">Welcome to Library Management System</h1>
+            <h2 style="text-align: center;"> "Without libraries, what have we? We have no past and no future." - Ray Bradbury</h2>
+        </div>
+    </div>
+    <br><br>
+
+    <div id="books-container">
+        <div class="books-div">
+        <h1>
+            Books
+        </h1>
+
+        </div>
+    </div>
+    <br><br>
+
+    <div id="cin-cout-container">
+        <h1>
+            Check-Out Form
+        </h1>
+        <br><br>
+        <div class="card">
+            <div class="card-body">
+                <form id="coutform" class="form">
+                    <div class="row">
+                        <div class="col">
+                        <input type="text" class="form-control" name="fname" placeholder="First name" required="1">
+                        </div>
+                        <div class="col">
+                        <input type="text" class="form-control" name="lname" placeholder="Book ID" required="1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                        <input type="text" class="form-control" name="bookname" placeholder="Book Name" required="1">
+                        </div>
+                        <div class="col">
+                        <input type="text" class="form-control" name="authorname" placeholder="Author name" required="1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                        <input type="text" class="form-control" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="col">
+                        <input type="text" class="form-control" name="publishername" placeholder="Publisher name" required="1">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" name="count" placeholder="No of Books" required="1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                        <input type="text" class="form-control" name="language" placeholder="Language">
+                        </div>
+                        <div class="col">
+                            <b>Check Out Date </b><input style="width: 10em" type="date" class="form-control" name="checkoutdate" placeholder="check out date" required="1">
+                        </div>
+                    </div>
+                    <input id='submit' class="btn btn-primary" type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="alert alert-success check-out-success" role="alert">
+            Your form has been Submitted!! Check out success
+        </div>
+        <div class="alert alert-danger check-out-failed" role="alert">
+            The book is not available
+        </div>
+
+        <br><br>
+
+        <h1>
+            Check-In Form
+        </h1>
+        <br><br>
+        <div class="card">
+            <div class="card-body">
+                <form id="cinform" class="form">
+                    <div class="row">
+                        <div class="col">
+                        <input type="text" class="form-control" name="lname" placeholder="Book ID">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="bookname" placeholder="Book Name">
+                        </div>
+                        <div class="col">
+                            <input type="nummber" class="form-control" name="count" placeholder="No of books">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                        <input type="text" class="form-control" name="language" placeholder="Language">
+                        </div>
+                        <div class="col">
+                            <b>Check in date</b><input type="date" class="form-control" name="checkindate" placeholder="check-in-date">
+                        </div>
+                    </div>
+                    <input id='submit' class="btn btn-primary" type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="alert alert-success check-in-success" role="alert">
+            Your form has been Submitted!! Check in success
+        </div>
+        <div class="alert alert-danger check-in-failed" role="alert">
+            Invalid Book ID
+        </div>
+    </div>
+
+    <div id="admin-container">
+        <h1>
+            Admin 
+        </h1>
+        <br><br>
+        <div class="card">
+            <h3 style="padding: 1em">Add Books</h3>
+            <div class="card-body">
+                <form id="addform" class="form">
+                    <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" name="bname" placeholder="Book name" required="1">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="bid" placeholder="Book ID" required="1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="language" placeholder="Language">
+                          </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="aname" placeholder="Author name" required="1">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="pname" placeholder="Publisher name" required="1">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" name="count" placeholder="No of Books" required="1">
+                        </div>
+                    </div>
+
+                    <input id='submit' class="btn btn-primary" type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="alert alert-success add-success" role="alert">
+            The mentioned book is added
+        </div>
+        <div class="alert alert-danger add-failed" role="alert">
+            The book is not available
+        </div>
+        <div class="card">
+            <h3 style="padding: 1em">Delete Books</h3>
+            <div class="card-body">
+                <form id="removeform" class="form">
+                    <div class="row">
+                        <div class="col">
+                          <input type="text" class="form-control" name="bname" placeholder="Book name" required="1">
+                        </div>
+                        <div class="col">
+                          <input type="text" class="form-control" name="bid" placeholder="Book ID" required="1">
+                        </div>
+                    </div>
+                    <input id='submit' class="btn btn-primary" type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="alert alert-success remove-success" role="alert">
+            The mentioned book is removed from the library
+        </div>
+        <div class="alert alert-danger remove-failed" role="alert">
+            The book is not available
+        </div>
+
+    </div>
+</body>
+</html>
